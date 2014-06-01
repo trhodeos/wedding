@@ -1,0 +1,181 @@
+$primary-color: white;
+$secondary-color: #6E7FA5;
+$text-color: #122A5D;
+$menu-color: #6E7FA5;
+
+@mixin cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin border-radius($rad) {
+  border-radius: $rad;
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: $text-color;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Josefin Slab', serif;
+}
+
+.section {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+}
+
+hr {
+  background-color: $secondary-color;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+ul {
+  list-style-type: none;
+  width: 550px;
+  margin: 0 auto;
+}
+
+li {
+  display: inline;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 25px;
+  line-height: 3.4;
+}
+a:link {
+  color: rgb(255,255,255);
+}
+a:active {
+  color: rgb(255,255,255);
+}
+a:visited {
+  color: rgb(255,255,255);
+}
+a:hover {
+  color: rgb(255,255,255);
+}
+
+.article {
+  background:$primary-color;
+  opacity: 0.95;
+  padding: 20px;
+  @include border-radius(5px);
+  @include span-columns(1);
+  @include media($mobile) {
+    @include span-columns(1);
+    margin: 20px 0;
+  }
+  @include media($tablet) {
+    @include span-columns(1);
+    margin: 20px 0;
+  }
+}
+
+.article.static {
+  height: 350px;
+  @include span-columns(2);
+  @include media($mobile) {
+    @include span-columns(1);
+} 
+@include media($tablet) {
+  @include span-columns(1);
+}
+}
+.article.headline {
+  text-align: center;
+  width: 100%;
+  background: none;
+}
+
+.article.headline h1 {
+  background: $primary-color;
+}
+
+.article.empty {
+  background: none;
+}
+.article.half {
+  height: 100px;
+}
+
+.section-container {
+  @include outer-container;
+}
+
+div.section-container {
+  padding: 50px 0;
+}
+
+.selected {
+  // #333
+  background-color: $text-color;
+}
+
+.links {
+  // rgb(85, 85, 85) 
+  background-color: $menu-color;
+  color: $text-color;
+}
+
+.section[data-type="background"] {
+  min-height: 700px;
+  background: url(foo) no-repeat center center fixed; 
+  @include cover;
+}
+
+#top { background-image: url(../img/greets.jpg); }
+#us { background-image: url(../img/us.png); }
+#party { background-image: url(../img/party.jpg); }
+#where { background-image: url(../img/greets.jpg); }
+#registry { background-image: url(../img/registry.jpg); }
+
+.party {
+  position: relative;
+  height: 100%;
+  padding: 10px 0;
+  @include media($mobile) { // As defined in _grid-settings.scss
+    text-align: center;
+  }
+  @include media($tablet) { // As defined in _grid-settings.scss
+    text-align: center;
+  }
+}
+.party-image {
+  width: 100px;
+  border: 2px $text-color solid;
+  @include border-radius(2px);
+  margin-left: 10px;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  @include media($mobile) { // As defined in _grid-settings.scss
+    position: static;
+    display: block;
+    margin: 0 auto;
+  }
+  @include media($tablet) { // As defined in _grid-settings.scss
+    position: static;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
