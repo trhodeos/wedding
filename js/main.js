@@ -150,7 +150,7 @@ jr.setUpPartySection = function() {
     });
 };
 
-$(document).ready(function() {
+jr.setUpParallax_ = function() {
   var $window = $(window);
   $('.section[data-type="background"]').each(function() {
     var $that = $(this);
@@ -165,6 +165,10 @@ $(document).ready(function() {
     }
     });
   });
+};
+
+$(document).ready(function() {
+  jr.setUpParallax_();
   jr.setUpPartySection();
   jr.setUpScrolling();
   jr.setUpFloatingMenu();

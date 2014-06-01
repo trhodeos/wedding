@@ -44,33 +44,33 @@ hr {
   margin: 0;
   border: none;
 }
-ul {
+.menu-container {
   list-style-type: none;
   width: 550px;
   margin: 0 auto;
 }
 
-li {
+.menu-item {
   display: inline;
   padding: 10px;
 }
 
-a {
+.menu-link {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0 25px;
   line-height: 3.4;
 }
-a:link {
+.menu-link:link {
   color: rgb(255,255,255);
 }
-a:active {
+.menu-link:active {
   color: rgb(255,255,255);
 }
-a:visited {
+.menu-link:visited {
   color: rgb(255,255,255);
 }
-a:hover {
+.menu-link:hover {
   color: rgb(255,255,255);
 }
 
@@ -95,11 +95,12 @@ a:hover {
   @include span-columns(2);
   @include media($mobile) {
     @include span-columns(1);
-} 
-@include media($tablet) {
-  @include span-columns(1);
+  } 
+  @include media($tablet) {
+    @include span-columns(1);
+  }
 }
-}
+
 .article.headline {
   text-align: center;
   width: 100%;
@@ -113,6 +114,7 @@ a:hover {
 .article.empty {
   background: none;
 }
+
 .article.half {
   height: 100px;
 }

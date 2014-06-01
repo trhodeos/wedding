@@ -97,31 +97,31 @@ hr {
   margin: 0;
   border: none; }
 
-ul {
+.menu-container {
   list-style-type: none;
   width: 550px;
   margin: 0 auto; }
 
-li {
+.menu-item {
   display: inline;
   padding: 10px; }
 
-a {
+.menu-link {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0 25px;
   line-height: 3.4; }
 
-a:link {
+.menu-link:link {
   color: white; }
 
-a:active {
+.menu-link:active {
   color: white; }
 
-a:visited {
+.menu-link:visited {
   color: white; }
 
-a:hover {
+.menu-link:hover {
   color: white; }
 
 .article {
@@ -226,7 +226,7 @@ div.section-container {
   background-image: url(../img/greets.jpg); }
 
 #us {
-  background-image: url(../img/us.jpg); }
+  background-image: url(../img/us.png); }
 
 #party {
   background-image: url(../img/party.jpg); }
