@@ -80,7 +80,7 @@ textarea {
   color: #122a5d; }
 
 html {
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 1.4;
   font-family: 'Josefin Slab', serif; }
 
@@ -97,9 +97,15 @@ hr {
   margin: 0;
   border: none; }
 
+.float-menu {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
 .menu-container {
   list-style-type: none;
-  width: 550px;
+  width: 750px;
   margin: 0 auto; }
 
 .menu-item {
@@ -157,7 +163,6 @@ hr {
         margin-right: 0; } }
 
 .article.static {
-  height: 350px;
   float: left;
   display: block;
   margin-right: 5.26316%;
@@ -183,36 +188,42 @@ hr {
 
 .article.headline {
   text-align: center;
-  width: 100%;
-  background: none; }
+  width: 100%;}
 
 .article.headline h1 {
   background: white; }
 
 .article.empty {
+  height: 350px;
   background: none; }
 
 .article.half {
-  height: 100px; }
+  height: 100px; 
+}
 
 .section-container {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
-  .section-container:after {
-    content: "";
-    display: table;
-    clear: both; }
+  margin-right: auto; 
+}
+.section-container:after {
+  content: "";
+  display: table;
+  clear: both; 
+}
 
 div.section-container {
-  padding: 50px 0; }
+  padding: 50px 0; 
+}
 
 .selected {
-  background-color: #122a5d; }
+  background-color: #122a5d; 
+}
 
 .links {
   background-color: #6e7fa5;
-  color: #122a5d; }
+  color: #122a5d; 
+}
 
 .section[data-type="background"] {
   min-height: 700px;
@@ -220,54 +231,74 @@ div.section-container {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover; 
+}
 
 #top {
-  background-image: url(../img/greets.jpg); }
+  background-image: url(../img/greets.jpg); 
+}
 
 #us {
-  background-image: url(../img/us.png); }
+  background-image: url(../img/us.png); 
+}
 
 #party {
-  background-image: url(../img/party.jpg); }
+  background-image: url(../img/party.jpg); 
+}
 
 #where {
-  background-image: url(../img/greets.jpg); }
+  background-image: url(../img/test2.png); 
+}
+
+#lodging {
+  background-image: url(../img/test1.png); 
+}
 
 #registry {
-  background-image: url(../img/registry.jpg); }
+  background-image: url(../img/registry.jpg); 
+}
 
 .party {
   position: relative;
   height: 100%;
-  padding: 10px 0; }
-  @media screen and (max-width: 480px) {
-    .party {
-      text-align: center; } }
-  @media screen and (max-width: 768px) {
-    .party {
-      text-align: center; } }
+  padding: 10px 0; 
+}
+@media screen and (max-width: 480px) {
+  .party {
+    text-align: center; 
+  } 
+}
+@media screen and (max-width: 768px) {
+  .party {
+    text-align: center; 
+  } 
+}
 
 .party-image {
-  width: 100px;
+  width: 200px;
   border: 2px #122a5d solid;
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   margin-left: 10px;
-  position: absolute;
+  float: right;
   right: 0;
-  top: 25px; }
-  @media screen and (max-width: 480px) {
-    .party-image {
-      position: static;
-      display: block;
-      margin: 0 auto; } }
-  @media screen and (max-width: 768px) {
-    .party-image {
-      position: static;
-      display: block;
-      margin: 0 auto; } }
+  top: 25px; 
+}
+@media screen and (max-width: 480px) {
+  .party-image {
+    position: static;
+    display: block;
+    margin: 0 auto; 
+  } 
+}
+@media screen and (max-width: 768px) {
+  .party-image {
+    position: static;
+    display: block;
+    margin: 0 auto; 
+  } 
+}
 
 /* ==========================================================================
    Helper classes
