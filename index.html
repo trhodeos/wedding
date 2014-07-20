@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="stylesheets/normalize.css">
     <link rel="stylesheet" href="stylesheets/main.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -47,14 +47,14 @@
         <div class="article static">
           <h2>About Us</h2>
           <p>The short version of the story is we were best friends who decided to get married. The long version is a little bit more interesting. It all started when Melissa, Shradha and I needed a new roommate. Shradha and Tyler knew each other from days together in UT Natural Science Council, and he was brave enough to say he was willing to live with 3 girls. Tyler moved in during the summer when Shradha and Melissa were living in Houston, so we got to know each other really well. We bonded over our love for tex mex, good tv shows, and the search for a dog for Tyler to adopt (which we were super successful with because Scout is the best dog ever). I joked that he was basically my boyfriend because we did everything together. Little did I know 6 months later we would be dating, and 2 years later we would be engaged and living in San Francisco!</p>
-          <center><img src="img/nat_and_ty.jpg" width="400px" style="border-radius:10px; border:1px solid black"></img></center>
+          <center><img class="image" src="img/nat_and_ty.jpg" width="400px"></img></center>
           <h2>How He Proposed</h2>
           <p>Tyler proposed on February 22, 2014 in Austin and it was a complete surprise. I was under the impression that we were going to a boat party on Town Lake to celebrate our friend, Sid. How this wasn’t suspicious to me, I have no idea! We spent the day like any other day: doing chores around the house and grabbing a late lunch at South Congress Cafe. As we were heading to the dock, Tyler started to stall and said we needed to grab coffee because he was tired. Apparently, our friends weren’t done decorating the boat for our arrival and told him to wait. I was super worried that we would miss the boat, but still wasn’t catching on to the ploy. Once we make our way down to the dock, Tyler tells me that we have to take a practice run on the boat before the party gets there. The boat was decorated with white streamers and had two glasses of champagne...still I don’t suspect a thing other than they had very questionable decorations for a boat party for a guy! We make our way out to the middle of the lake where it all clicks as he stops the boat and pulls the ring out. Of course I said YES! We went back around and picked up some of our closest friends and called our family. The surprises didn’t stop there because little did I know that both of our families were back at the house to surprise us with an engagement party. It was the absolute best.</p>
         </div>
       </div>
     </div>
     <hr/> 
-    <div id="party" class="section" data-type="background" data-original-y="120" data-speed="25">
+    <div id="party" class="section" data-type="background" data-original-y="110" data-speed="40">
       <div class="section-container">
         <div id="girls" class="article left">
           <h2>The Girls</h2>
@@ -72,7 +72,17 @@
         </div>
         <div class="article half">
           <h3>How To Get There</h3>
-          <p>bloopidy blapiday</p>
+          <p>Because this is in a gated area, map programs will give you wrong directions. Once you get to the intersection of Lohman's Crossing and Wingreen Loop, follow these instructions:
+          <ul>
+            <li>Turn on to Wingreen Loop.</li>
+            <li>Proceed into the guard-gated entrance of The Hills and check in with security.</li> 
+            <li>After checking in with Security, proceed through the gate and drive to the 2nd Stop Sign, turn right onto The Hills Drive.</li>
+            <li>Proceed along The Hills Drive until coming to a Stop Sign at Clubs Estate Parkway and turn left.</li>
+            <li>Go approximately 1 mile until you reach The Hills Country Club Clubhouse on the left.</li>
+          </ul>
+          For more detailed instructions, read <a href="img/directions.pdf">this.</a>
+          </p>
+
         </div>
       </div>
     </div>
@@ -84,6 +94,17 @@
         </div>
         <div class="article">
           <h2>Things to do</h2>
+          <center><img src="/img/hi.jpg" class="image"></center>
+          <p>As a couple of displaced Texans, we have come to miss a few great Texas/Austin "traditions". For those of y'all coming in from out of town, we have a few suggestions:
+          <ul>
+            <li>BBQ - Nothing is better than Texas BBQ. We suggest: Schmidt Family BBQ, La Barbecue, Franklin (well worth the 4 hour wait), Stiles and Switch.</li>
+            <li>Tex Mex - The greasier, the better. We suggest: Trudy's, Santa Ritas, Santa Catarina.</li>
+            <li>Breakfast Tacos - Never had them before? Trust us. We suggest: Taco Deli, Torchy's.</li>
+            <li>Visit UT's campus (Hook 'em)</li>
+            <li>Visit the Texas State Capitol Building</li>
+            <li>Like parks? Check out Zilker park near downtown</li>
+            <li>Talk a walk around South Congress street (SoCo, if you will), near Monroe St. Hopdoddy and Homeslice are our favorite restaraunts around there.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -92,19 +113,28 @@
       <div class="section-container">
         <div class="article static empty half"></div>
         <div class="article static">
-          <h3>
-            Registry Links
-          </h3>
-          <ul>
-            <li>blah</li>
-          </ul>
+          <h3>Registry Links</h3>
+          <div class="registry-container">
+            <ul>
+              <li class="image registry">
+              <a target="_blank" href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=541393740&pwsurl=">
+                <img class="bbb" src="/img/bbb.png">
+              </a>
+              </li>
+              <li class="image registry">
+              <a target="_blank" href="http://www.potterybarn.com/registry/3538261/registry-list.html">
+                <img src="/img/pb.png">
+              </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
     <hr/>
     <script type="text/template" id="party-template">
-      <div class="party">
-        <img class="party-image" src="{{imageUrl}}"/>
+      <div class="party-section">
+        <img class="party image" src="{{imageUrl}}"/>
         <h3>{{name}}</h3>
         <b>{{title}}</b>
         <p class="party-blurb">{{blurb}}</p>
@@ -121,20 +151,18 @@
         </p>
       </div>
     </script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.0/hogan.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+      <script src="js/vendor/hogan.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
 
-      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
       <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-          e.src='//www.google-analytics.com/analytics.js';
-          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-53012007-1', 'auto');
+        ga('send', 'pageview');
       </script>
     </body>
   </html>

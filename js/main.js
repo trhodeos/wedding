@@ -146,8 +146,8 @@ jr.setUpScrolling = function() {
   // Animate menu scroll to content
   $('.menu-link').click(function() {
     var sel = this;
-    var newTop = Math.min(jr.contentTop[$(this).data('index') % jr.numLinks], $(document).height() - $(window).height()); // get content top or top position if at the document bottom
-    $('html,body').stop().animate({'scrollTop': newTop - jr.topBarSize}, animationTime, function() {
+    var newTop = Math.min(jr.contentTop[$(this).data('index') % jr.numLinks] - jr.topBarSize, $(document).height() - $(window).height()); // get content top or top position if at the document bottom
+    $('html,body').stop().animate({'scrollTop': newTop + 1}, animationTime, function() {
       window.location.hash = $(sel).attr('href');
     });
     return false;
@@ -215,6 +215,6 @@ $(document).ready(function() {
   jr.setUpPartySection();
   jr.setUpLodgingSection();
   jr.setUpParallax();
-  jr.setUpScrolling();
   jr.setUpFloatingMenu();
+  jr.setUpScrolling();
 });
