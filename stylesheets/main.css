@@ -46,20 +46,6 @@ img,
 video {
   vertical-align: middle; }
 
-/*
- * Remove default fieldset styles.
- */
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0; }
-
-/*
- * Allow only vertical resizing of textareas.
- */
-textarea {
-  resize: vertical; }
-
 /* ==========================================================================
    Browse Happy prompt
    ========================================================================== */
@@ -91,6 +77,7 @@ html {
   width: 100%;
   max-width: 1920px;
   position: relative; 
+  overflow:hidden;
 }
 
 .image {
@@ -107,6 +94,7 @@ html {
 }
 
 .bbb {
+  /* hack so I don't have to photoshop this sucker */
   padding: 21px;
 }
 
@@ -131,34 +119,38 @@ hr {
   position: relative;
 }
 
+@media all and (max-width: 25em) {
+  .registry-container > ul > li {
+    display: block;
+  }
+}
+
 .registry-container > ul > li {
   display: inline-block;
 }
 
 .menu-container {
   list-style-type: none;
-  width: 800px;
-  margin: 0 auto; }
+  width: 50em;
+  margin: 0 auto; 
+}
 
 .menu-item {
   display: inline;
-  padding: 10px; }
+  padding: 10px; 
+}
 
 .menu-link {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0 25px;
-  line-height: 3.4; }
+  line-height: 3.4; 
+}
 
-.menu-link:link {
+.menu-link:link,.menu-link:active,.menu-link:visited {
   color: white; }
 
-.menu-link:active {
-  color: white; }
-
-.menu-link:visited {
-  color: white; }
-
+/* TODO: wat */
 .menu-link:hover {
   color: white; }
 
@@ -167,69 +159,61 @@ hr {
   opacity: 0.95;
   padding: 20px;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   float: left;
   display: block;
   margin-right: 5.26316%;
-  width: 47.36842%; }
-  .article:last-child {
-    margin-right: 0; }
-  @media screen and (max-width: 480px) {
-    .article {
-      float: left;
-      display: block;
-      margin-right: 11.11111%;
-      width: 100%;
-      margin: 20px 0; }
-      .article:last-child {
-        margin-right: 0; } }
-  @media screen and (max-width: 768px) {
-    .article {
-      float: left;
-      display: block;
-      margin-right: 11.11111%;
-      width: 100%;
-      margin: 20px 0; }
-      .article:last-child {
-        margin-right: 0; } }
+  width: 47.36842%; 
+}
+.article:last-child {
+  margin-right: 0; 
+}
+@media all and (max-width: 25em) {
+  .article {
+    margin-right: 11.11111%;
+    width: 100%;
+    margin: 20px 0; 
+  }
+}
+@media (max-width: 50em) and (min-width: 25em) {
+  .article {
+    margin-right: 11.11111%;
+    width: 100%;
+    margin: 20px 0; 
+  }
+}
 
 .article.static {
   float: left;
   display: block;
   margin-right: 5.26316%;
-  width: 100%; }
-  .article.static:last-child {
-    margin-right: 0; }
-  @media screen and (max-width: 480px) {
-    .article.static {
-      float: left;
-      display: block;
-      margin-right: 11.11111%;
-      width: 100%; }
-      .article.static:last-child {
-        margin-right: 0; } }
-  @media screen and (max-width: 768px) {
-    .article.static {
-      float: left;
-      display: block;
-      margin-right: 11.11111%;
-      width: 100%; }
-      .article.static:last-child {
-        margin-right: 0; } }
+  width: 100%; 
+}
+.article.static:last-child {
+  margin-right: 0; 
+}
+@media all and (max-width: 25em) {
+  .article.static {
+    margin-right: 11.11111%;
+  }
+}
+@media (max-width: 50em) and (min-width: 25em) {
+  .article.static {
+    margin-right: 11.11111%;
+  }
+}
 
 .article.headline {
   text-align: center;
-  width: 100%;}
+  width: 100%;
+}
 
 .article.headline h1 {
-  background: white; }
+  background: white; 
+}
 
 .article.empty {
   height: 350px;
-  background: none; }
-
-.article.half {
+  background: none; 
 }
 
 .section-container {
@@ -257,7 +241,7 @@ div.section-container {
 }
 
 .section[data-type="background"] {
-  min-height: 700px;
+  min-height: 50em;
   background: url(foo) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -294,12 +278,8 @@ div.section-container {
   height: 100%;
   padding: 10px 0; 
 }
-@media screen and (max-width: 480px) {
-  .party {
-    text-align: center; 
-  } 
-}
-@media screen and (max-width: 768px) {
+
+@media (max-width: 50em) {
   .party {
     text-align: center; 
   } 
@@ -311,21 +291,13 @@ div.section-container {
   height: 200px;
   border: 2px solid #122a5d ;
   border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   margin-left: 10px;
   float: right;
   right: 0;
   top: 25px; 
 }
-@media screen and (max-width: 480px) {
-  .party.image {
-    position: static;
-    display: block;
-    margin: 0 auto; 
-  } 
-}
-@media screen and (max-width: 768px) {
+
+@media (max-width: 50em) {
   .party.image {
     position: static;
     display: block;
@@ -423,14 +395,6 @@ div.section-container {
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
-   ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
   * {
