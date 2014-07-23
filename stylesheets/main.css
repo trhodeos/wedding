@@ -257,7 +257,6 @@ div.section-container {
 }
 
 .section[data-type="background"] {
-  min-height: 50em;
   background: url(foo) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -267,13 +266,13 @@ div.section-container {
 /* for background-size:cover replacement on iOS devices */
 @media only screen and (orientation: portrait) and (device-width: 320px), (device-width: 768px) {
     .section[data-type="background"] {
-      -webkit-background-size: auto 150%;
+      -webkit-background-size: auto 100%;
       background-attachment: scroll;
     }
 }
 @media only screen and (orientation: landscape) and (device-width: 320px), (device-width: 768px) {
     .section[data-type="background"] {
-      -webkit-background-size: 150% auto;
+      -webkit-background-size: 100% auto;
       background-attachment: scroll;
     }
 }
