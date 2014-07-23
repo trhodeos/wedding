@@ -58,6 +58,9 @@ video {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html, body {
+  height: 100%;
+}
 html,
 button,
 input,
@@ -155,12 +158,12 @@ hr {
 
 .menu-item {
   display: inline;
-  padding: 10px; 
 }
 
 @media screen and (max-width: 50em) {
   .menu-container {
     width: 100%;
+    padding: 0;
   }
   .menu-item {
     text-align: center;
@@ -171,16 +174,17 @@ hr {
 .menu-link {
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0 25px;
-  line-height: 3.4; 
+  padding: 10px 35px;
+  line-height: 3.4;
+  width:100%
 }
 
 .menu-link:link,.menu-link:active,.menu-link:visited {
   color: white; }
 
-/* TODO: wat */
 .menu-link:hover {
-  color: white; }
+  background-color: #122a5d; 
+}
 
 .article {
   background: white;
@@ -209,9 +213,11 @@ hr {
   margin-right: 5.26316%;
   width: 100%; 
 }
+
 .article.static:last-child {
   margin-right: 0; 
 }
+
 @media screen and (max-width: 50em) {
   .article.static {
     margin-right: 11.11111%;

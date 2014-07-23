@@ -9,6 +9,11 @@ jr.isMobile = function() {
   }
 };
 
+jr.removeFloatingMenu_ = function() {
+  $('.float-menu').remove();
+  $('.links').data('float-menu', false);
+};
+
 jr.setUpFloatingMenu = function() {
   var $window = $(window),
       $links = $('.links').first();
@@ -23,9 +28,10 @@ jr.setUpFloatingMenu = function() {
           $links.data('float-menu', true);
         }
       } else if ($links.data('float-menu')) {
-        $('.float-menu').remove();
-        $links.data('float-menu', false);
+        jr.removeFloatingMenu_();
       }
+    } else {
+      jr.removeFloatingMenu_();
     }
   });
 };
@@ -82,8 +88,8 @@ jr.setUpScrolling = function() {
       var nextLoc = jr.contentTop[i + 1] || $(document).height(); 
       if (loc <= scrollPos && nextLoc > scrollPos) {
         // do this to both the floating menu and the in-place menu
-        $('.links li').removeClass('selected').eq(i).addClass('selected');
-        $('.float-menu li').removeClass('selected').eq(i).addClass('selected');
+        $('.links li a').removeClass('selected').eq(i).addClass('selected');
+        $('.float-menu li a').removeClass('selected').eq(i).addClass('selected');
         set = true;
       }
     });
